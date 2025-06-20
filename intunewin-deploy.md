@@ -7,6 +7,7 @@ Para aplicativos personalizados ou instaladores não MSI, é possível empacotar
 - Ferramenta [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool).
 - Arquivos de instalação prontos.
 - Parâmetros de instalação silenciosa.
+   > **Dica**: consulte os sites [SilentInstalHQ](https://silentinstallhq.com/) ou [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/latest-software.html) para descobrir os parâmetros de instalação silenciosa.
 
 ## 📦 Criando o pacote .intunewin
 

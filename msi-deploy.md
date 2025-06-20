@@ -98,14 +98,14 @@ Este guia apresenta o passo a passo para distribuir instaladores no formato `.MS
 - **Observações**: Campo para notas adicionais, como requisitos, contexto de uso ou dependências.
 - **Logotipo**: Upload de imagem para representar o aplicativo no Portal da Empresa.
 
-7. Atribua o aplicativo a grupos de usuários ou dispositivos.
+7. Atribua o aplicativo a grupos de usuários ou dispositivos:
 <table>
   <tr>
     <td><img src="imagens/MSI-DEPLOY-07.png"></td>
   </tr>
 </table>
 
-- Neste exemplo, o aplicativo foi atribuído como instalação obrigatória para todos os dispositivos gerenciados. No entanto, em ambientes corporativos reais, nem todos os aplicativos devem ser implantados desta forma. Para um gerenciamento mais seguro do deploy, é altamente recomendável utilizar grupos do Azure AD (Entra ID), permitindo segmentações por área, função ou departamento.
+- Neste exemplo, o aplicativo foi atribuído como **instalação obrigatória para todos os dispositivos gerenciados**. No entanto, em ambientes corporativos reais, nem todos os aplicativos devem ser implantados desta forma. Para um gerenciamento mais seguro do deploy, é altamente recomendável utilizar grupos do Azure AD (Entra ID), permitindo segmentações por área, função ou departamento:
 <table>
   <tr>
     <td><img src="imagens/MSI-DEPLOY-08.png"></td>

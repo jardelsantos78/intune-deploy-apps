@@ -5,8 +5,8 @@ Este guia apresenta o passo a passo para distribuir instaladores no formato `.MS
 ## ✅ Pré-requisitos
 
 - Arquivo `.msi` válido.
-- Conhecimento dos parâmetros de instalação silenciosa, se aplicável.
-   > **Dica**: consulte os sites [SilentInstalHQ](https://silentinstallhq.com/) ou [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/latest-software.html) para descobrir os parâmetros de instalação silenciosa
+- Parâmetros de instalação silenciosa.
+   > **Dica**: consulte os sites [SilentInstalHQ](https://silentinstallhq.com/) ou [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/latest-software.html) para descobrir os parâmetros de instalação silenciosa.
 - Permissão para criar políticas de aplicativos no Intune.
 
 ## 🚀 Etapas

@@ -108,6 +108,11 @@ Este guia apresenta o passo a passo para distribuir aplicativos diretamente da M
     <td><img src="imagens/STORE-DEPLOY-09.png"></td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td><img src="imagens/STORE-DEPLOY-10.png"></td>
+  </tr>
+</table>
 
 > ⚠️ Observação: Aplicativos Microsoft Store (novo) são executados em modo silencioso e não requerem parâmetros extras de instalação.
 

@@ -29,6 +29,10 @@ Este guia mostra como identificar o `{GUID}` de um aplicativo instalado no Windo
 Get-WmiObject -Class Win32_Product | Select-Object Name, IdentifyingNumber
 ```
 
+<p>
+  <img src="imagens/GUID-01.png">
+</p>
+
 3. **Localize o nome do aplicativo desejado** na lista exibida. O valor da coluna `IdentifyingNumber` será o GUID.
 
 #### 🎯 Dica: Filtrando por nome
@@ -39,6 +43,10 @@ Se quiser encontrar rapidamente o GUID de um aplicativo específico, você pode 
 Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "*NomeDoApp*" } | Select Name, IdentifyingNumber
 ```
 - Substitua `"NomeDoApp"` por parte do nome do aplicativo que deseja localizar.
+
+<p>
+  <img src="imagens/GUID-02.png">
+</p>
 
 #### ⚠️ Observações
 

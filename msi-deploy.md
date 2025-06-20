@@ -137,6 +137,11 @@ Este guia apresenta o passo a passo para distribuir instaladores no formato `.MS
     <td><img src="imagens/MSI-DEPLOY-12.png"></td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td><img src="imagens/MSI-DEPLOY-13.png"></td>
+  </tr>
+</table>
 
 ---
 

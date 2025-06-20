@@ -32,6 +32,8 @@ Para utilizar o Intune no ambiente corporativo, siga estes passos iniciais:
 - [`msi-deploy.md`](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/msi-deploy.md): Guia para deployment de arquivos MSI.
 - [`store-deploy.md`](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/sotre-deploy.md): Deployment de apps via Microsoft Store.
 - [`intunewin-deploy.md`](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/intunewin-deploy.md): Deployment utilizando arquivos `.intunewin`.
+- [`descobrir-guid.md`](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/descobrir-guid.md): Passo a passo para identificar o `{GUID}` de um aplicativo via PowerShell.
+
 
 ---
 

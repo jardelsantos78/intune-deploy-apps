@@ -23,7 +23,7 @@ Este guia mostra como identificar o `{GUID}` de um aplicativo instalado no Windo
 
 1. **Abra o PowerShell como administrador.**
 
-2. **Execute o seguinte comando para listar todos os aplicativos MSI com seus respectivos GUIDs:**
+2. **Execute o seguinte comando para *listar todos os aplicativos MSI* com seus respectivos GUIDs:**
 
 ```powershell
 Get-WmiObject -Class Win32_Product | Select-Object Name, IdentifyingNumber
@@ -54,7 +54,7 @@ Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "*NomeDoApp*" 
 
 #### 🗂️ Alternativa: Consultando diretamente o Registro do Windows
 
-Outra forma (*e talvez a mais recomendada*) de localizar o GUID é acessando as chaves de registro onde o Windows armazena informações dos aplicativos instalados:
+Outra forma (*e talvez a mais recomendada*) de localizar o GUID é consultando as chaves de registro (*via PowerShell*) onde o Windows armazena as informações dos aplicativos instalados:
 
 ```powershell
 Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall, `
@@ -62,6 +62,9 @@ HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall | `
 Get-ItemProperty | `
 Where-Object { $_.DisplayName -like "*NomeDoApp*" }
 ```
+<p>
+  <img src="imagens/GUID-03.png">
+</p>
 
 > 🔍 Essa abordagem é especialmente útil para identificar aplicativos que não aparecem no `Win32_Product`, além de evitar a reconfiguração silenciosa dos instaladores MSI — algo que pode ocorrer ao usar o `Get-WmiObject`.
 

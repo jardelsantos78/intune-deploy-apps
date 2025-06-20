@@ -73,3 +73,6 @@ Where-Object { $_.DisplayName -like "*NomeDoApp*" }
 ```cmd
 msiexec /x "{GUID}" /quiet
 ```
+---
+
+⬅️ [Voltar à Página Principal](https://github.com/jardelsantos78/intune-deploy-apps/tree/main)

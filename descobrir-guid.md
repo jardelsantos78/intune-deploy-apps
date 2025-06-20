@@ -31,19 +31,32 @@ Get-WmiObject -Class Win32_Product | Select-Object Name, IdentifyingNumber
 
 3. **Localize o nome do aplicativo desejado** na lista exibida. O valor da coluna `IdentifyingNumber` será o GUID.
 
-### 🎯 Dica: Buscar um aplicativo específico
+#### 🎯 Dica: Filtrando por nome
 
-Você pode filtrar a busca por nome para agilizar a localização do GUID:
+Se quiser encontrar rapidamente o GUID de um aplicativo específico, você pode filtrar a pesquisa pelo nome com o seguinte comando:
 
 ```powershell
 Get-WmiObject -Class Win32_Product | Where-Object { $_.Name -like "*NomeDoApp*" } | Select Name, IdentifyingNumber
 ```
+- Substitua `"NomeDoApp"` por parte do nome do aplicativo que deseja localizar.
 
-Substitua `"NomeDoApp"` por parte do nome do aplicativo.
-
-## ⚠️ Observações
+#### ⚠️ Observações
 
 - Esse comando pode causar uma revalidação silenciosa dos instaladores MSI na máquina. Para inspeção sem impactos, considere usar ferramentas como o [Regedit](https://learn.microsoft.com/en-us/windows/win32/sbscs/registry-entries-for-installed-applications) ou o utilitário **Orca**.
+
+#### 🗂️ Alternativa: Consultando diretamente o Registro do Windows
+
+Outra forma (*e talvez a mais recomendada*) de localizar o GUID é acessando as chaves de registro onde o Windows armazena informações dos aplicativos instalados:
+
+```powershell
+Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall, `
+HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall | `
+Get-ItemProperty | `
+Where-Object { $_.DisplayName -like "*NomeDoApp*" }
+```
+
+> 🔍 Essa abordagem é especialmente útil para identificar aplicativos que não aparecem no `Win32_Product`, além de evitar a reconfiguração silenciosa dos instaladores MSI — algo que pode ocorrer ao usar o `Get-WmiObject`.
+
 - O `{GUID}` deve ser usado na linha de desinstalação como:
 
 ```cmd

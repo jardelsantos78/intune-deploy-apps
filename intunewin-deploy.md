@@ -17,23 +17,32 @@ Para criação de pacote a partir de linha de comando, baixe a ferramenta no lin
 ```bash
 IntuneWinAppUtil -c <pasta_do_instalador> -s <arquivo_setup> -o <pasta_de_saida>
 ```
-<p>
-  <img src="imagens/INTUNEWIN-DEPLOY-01.png">
-</p>
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-01.png"></td>
+  </tr>
+</table>
 
-### Utilizando frontend GUI
-- Para baixar a ferramenta, acesse  [Intune Desktop Packager](./GUI/intune_gui.md);
-- Ao executar o arquivo Intune-Desktop-Pack.exe pela primeira vez, os arquivos necessários serão baixados automaticamente e disponibilizados na mesma pasta do aplicativo;
-- Utilizando uma interface gráfica, o processo se torna mais amigável e rápido:
-<p>
-  <img src="imagens/INTUNEWIN-DEPLOY-02.png">
-</p>
-<p>
-  <img src="imagens/INTUNEWIN-DEPLOY-04.png">
-</p>
-<p>
-  <img src="imagens/INTUNEWIN-DEPLOY-05.png">
-</p>
+### 🖥️ Utilizando a Interface Gráfica (GUI)
+
+- Faça o download da ferramenta em [Intune Desktop Packager](./GUI/intune_gui.md).
+- Ao executar o arquivo **Intune-Desktop-Pack.exe** pela primeira vez, os componentes necessários serão baixados automaticamente e salvos na mesma pasta.
+- Com uma interface gráfica intuitiva, o processo de empacotamento torna-se mais rápido, acessível e livre de linhas de comando.
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-02.png"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-04.png"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-05.png"></td>
+  </tr>
+</table>
 
 ## 🚀 Etapas no Intune
 

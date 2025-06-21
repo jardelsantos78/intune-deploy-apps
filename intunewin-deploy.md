@@ -1,4 +1,4 @@
-# 📁 Deploy de Aplicativos com arquivo .intunewin
+# 📁 Deploy de aplicativos com arquivo .intunewin
 
 Este guia apresenta o passo a passo para distribuir aplicativos personalizados ou instaladores não MSI encapsulando-os em formato `.intunewin` utilizando o Microsoft Intune.
 

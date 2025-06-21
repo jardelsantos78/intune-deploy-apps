@@ -1,4 +1,4 @@
-# 🛍️ Deploy de Aplicativos da Microsoft Store via Intune
+# 🛍️ Deploy de aplicativos da Loja Microsoft Store via Intune
 
 Este guia apresenta o passo a passo para distribuir aplicativos diretamente da Microsoft Store usando o Intune.
 

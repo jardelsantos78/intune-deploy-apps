@@ -69,7 +69,7 @@ IntuneWinAppUtil -c <pasta_do_instalador> -s <arquivo_setup> -o <pasta_de_saida>
 </table>
 
 5. **Clique em Selecionar um arquivo de pacote do aplicativo** e na aba exibida, **clique para localizar o pacote `.intunewin`**;
-   > *Nota:* Utilizarei para exemplo o aplicativo *[Image Resizer]([https://get.diagrams.net/](https://github.com/bricelam/ImageResizer/releases/download/v3.1.2/ImageResizerSetup-3.1.2.exe)* com os parâmetros para a instalação silenciosa disponibilizados no site [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/silent_install_Image-Resizer-for-Windows-(3.1.2).html).
+   > *Nota:* Utilizarei para exemplo o aplicativo *[Image Resizer](https://github.com/bricelam/ImageResizer/releases/download/v3.1.2/ImageResizerSetup-3.1.2.exe)* com os parâmetros para a instalação silenciosa disponibilizados no site [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/silent_install_Image-Resizer-for-Windows-(3.1.2).html).
 <table>
   <tr>
     <td><img src="imagens/INTUNEWIN-DEPLOY-08.png"></td>
@@ -196,6 +196,16 @@ Aplica o aplicativo independentemente da arquitetura ou versão do sistema opera
 > **Por padrão não são modificados.**
 
 9. Nesta etapa, as regras de detecção são responsáveis por informar ao Intune quando um aplicativo já está presente no dispositivo. Com isso, o serviço evita reinstalar apps existentes e aplica lógica de compliance com mais precisão.
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-13.png"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-14.png"></td>
+  </tr>
+</table>
 
 ### 📌 Formato de Regras
 
@@ -205,10 +215,10 @@ Campo obrigatório que determina como a detecção será realizada:
 
 1. **Configurar manualmente as regras de detecção**  
    Permite definir uma ou mais regras baseadas em:
+   - MSI ({GUID})
    - Arquivo ou pasta
-   - Registro (registry)
-   - Código de versão ou presença de caminho
-   - É a opção mais comum quando se conhece bem a estrutura da instalação.
+   - Registro
+   Em geral é a opção mais utilizada.
 
 2. **Usar um script de detecção personalizado**  
    Permite carregar um script PowerShell que o Intune executará para identificar se o app está instalado.  
@@ -222,10 +232,9 @@ Campo obrigatório que determina como a detecção será realizada:
 | Instaladores silenciosos sem padrão claro | Script de detecção |
 | Instalações que geram arquivos com caminho conhecido | Detecção por caminho de arquivo |
 
+> Para saber mais, acesse [Exemplos de Regra de Detecção](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/win32-regras-deteccao-exemplos.md)
 
-10. Faça upload do arquivo `.intunewin`.
-11. Preencha os campos de nome, descrição e editor.
-12. Configure os programas de instalação e desinstalação, requisitos e detecção.
+10. 
 13. Atribua aos grupos.
 14. Conclua o processo e acompanhe a implantação.
 

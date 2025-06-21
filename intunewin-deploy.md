@@ -1,6 +1,6 @@
 # 📁 Deploy de Aplicativos com arquivo .intunewin
 
-Para aplicativos personalizados ou instaladores não MSI, é possível encapsular arquivos `.exe`, `.bat` etc em formato `.intunewin`.
+Este guia apresenta o passo a passo para distribuir aplicativos personalizados ou instaladores não MSI encapsulando-os em formato `.intunewin` utilizando o Microsoft Intune.
 
 ## ✅ Pré-requisitos
 
@@ -12,11 +12,22 @@ Para aplicativos personalizados ou instaladores não MSI, é possível encapsula
 
 ## 📦 Criando o pacote .intunewin
 
-### Utilizando linha de comando
-Para criação de pacote a partir de linha de comando, baixe a ferramenta no link informado anteriormente, abra o PowerShell como administrador e execute o seguinte comando:
+### 🧾 Utilizando a Linha de Comando
+
+Para criar o pacote `.intunewin` via linha de comando:
+
+1. Baixe a ferramenta **Win32 Content Prep Tool** (link fornecido anteriormente);
+2. Abra o **PowerShell como administrador**;
+3. Execute o seguinte comando, substituindo os parâmetros conforme necessário:
+
 ```bash
-IntuneWinAppUtil -c <pasta_do_instalador> -s <arquivo_setup> -o <pasta_de_saida>
+IntuneWinAppUtil.exe -c <caminho_para_a_pasta_instalador> -s <arquivo_setup.exe> -o <caminho_de_saida>
 ```
+> Onde:  
+**-c** define a pasta que contém o instalador e os arquivos de suporte.  
+**-s** especifica o nome do instalador a ser empacotado.  
+**-o** indica onde o arquivo .intunewin será salvo.  
+
 <table>
   <tr>
     <td><img src="imagens/INTUNEWIN-DEPLOY-01.png"></td>
@@ -232,12 +243,67 @@ Campo obrigatório que determina como a detecção será realizada:
 | Instaladores silenciosos sem padrão claro | Script de detecção |
 | Instalações que geram arquivos com caminho conhecido | Detecção por caminho de arquivo |
 
-> Para saber mais, acesse [Exemplos de Regra de Detecção](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/win32-regras-deteccao-exemplos.md)
+> Para informações mais detalhadas, acesse [Exemplos de Regra de Detecção](https://github.com/jardelsantos78/intune-deploy-apps/tree/main/win32-regras-deteccao-exemplos.md)
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-15.png"></td>
+  </tr>
+</table>
 
-10. 
-13. Atribua aos grupos.
-14. Conclua o processo e acompanhe a implantação.
+> Neste exemplo, utilizamos como critério de validação a regra baseada em MSI, onde o identificador {GUID} é verificado. Se esse identificador for localizado no sistema, o Intune interpreta que o aplicativo já está instalado no dispositivo.
 
+10. Na etapa **Dependências** é possível definir outros aplicativos que precisam estar instalados **antes** do aplicativo principal ser implantado. As dependências são úteis quando o app principal requer componentes auxiliares como por exemplo drivers, bibliotecas DLLs, frameworks, etc.
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-16.png"></td>
+  </tr>
+</table>
+
+11. Na etapa **Substituição** é possível configurar quais aplicativos serão **atualizados ou substituídos** automaticamente quando este novo aplicativo for instalado em um dispositivo.
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-17.png"></td>
+  </tr>
+</table>
+
+### ℹ️ Quando usar
+
+Utilize essa funcionalidade se:
+
+- Estiver **atualizando** um aplicativo existente (mantendo a instalação anterior)
+- Quiser **substituir** completamente um aplicativo antigo (removendo a versão anterior)
+
+| Ação desejada          | Configuração necessária                                     |
+|------------------------|-------------------------------------------------------------|
+| Atualizar um app       | **Desmarque** a opção "Desinstalar a versão anterior"       |
+| Substituir um app      | **Marque** a opção "Desinstalar a versão anterior"          |
+
+> 💡 Ao substituir um aplicativo, o novo será instalado e o antigo removido automaticamente no processo.
+> Máximo de **10 aplicativos** definidos para substituição direta
+
+12. Atribua o aplicativo a grupos de usuários ou dispositivos:
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-18.png"></td>
+  </tr>
+</table>
+
+- Neste exemplo, o aplicativo foi atribuído à opção **Disponível para dispositivos registrados**, *direcionada ao grupo Todos os dispositivos*. Dessa forma, ele ficará acessível no Portal da Empresa (Company Portal), e a instalação será realizada apenas quando o próprio usuário iniciar o processo manualmente.
+
+13. Por fim, **revise o aplicativo e se estiver tudo certo, clique em Criar**:
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-19.png"></td>
+  </tr>
+</table>
+
+14. O monitoramento do aplicativo poderá ser acompanhado através da guia Monitorar e, conforme a instalação manual ocorra, o quantitativo será exibido automaticamente na próxima sincronização do Intune:
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-20.png"></td>
+  </tr>
+</table>
  
-
 ---
+
+⬅️ [Voltar à Página Principal](https://github.com/jardelsantos78/intune-deploy-apps/tree/main)

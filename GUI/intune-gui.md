@@ -1,6 +1,6 @@
 # Intune Desktop Packager
 
-**Intune Desktop Packager** é uma ferramenta em PowerShell com interface gráfica (GUI) desenvolvida para facilitar o empacotamento de aplicativos Win32 no formato `.intunewin`, compatível com o Microsoft Intune.
+É uma ferramenta com interface gráfica desenvolvida em PowerShell que simplifica a criação de pacotes `.intunewin` para distribuição de aplicativos via Microsoft Intune (Endpoint Manager).
 
 ## 📦 Visão Geral
 
@@ -8,17 +8,15 @@ Este utilitário simplifica o processo de conversão de instaladores tradicionai
 
 ## ⚙️ Funcionalidades
 
-- Interface gráfica amigável e intuitiva
-- Integração com `IntuneWinAppUtil.exe`
-- Suporte à seleção de:
-  - Caminho da ferramenta de empacotamento
-  - Pasta de origem da aplicação
-  - Arquivo de instalação principal
-  - Pasta de destino para o arquivo `.intunewin`
-- Exibição automática de logotipo personalizado
-- Compatível com tema claro e escuro
-- Notificações e mensagens informativas
-- Registro de log detalhado com cada conversão realizada
+- Interface gráfica amigável e moderna
+- Modo escuro nativo
+- Detecção automática do utilitário `IntuneWinAppUtil.exe`
+  - Caso não esteja presente na pasta do script, o aplicativo é baixado automaticamente.
+- Preenchimento automático do caminho do executável após o download
+- Download automático dos logotipos personalizados, se ausentes
+- Exibição de mensagens informativas durante o processo
+- Geração de log detalhado com cada conversão de pacote `.intunewin`
+- Botão para limpar os campos e reiniciar o processo
 
 ## 📁 Estrutura
 

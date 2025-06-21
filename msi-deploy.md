@@ -1,4 +1,4 @@
-# 📦 Deploy de Aplicativos MSI via Intune
+# 📦 Deploy de aplicativos MSI via Intune
 
 Este guia apresenta o passo a passo para distribuir instaladores no formato `.MSI` utilizando o Microsoft Intune.
 

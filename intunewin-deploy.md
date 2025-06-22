@@ -37,11 +37,11 @@ IntuneWinAppUtil.exe -c <caminho_para_a_pasta_instalador> -s <arquivo_setup.exe>
 ### 🖥️ Utilizando a Interface Gráfica (GUI)
 
 - Faça o download da ferramenta em [Intune Desktop Packager](./GUI/intune-gui.md).
-- Ao executar o arquivo **Intune-Desktop-Pack.exe** pela primeira vez, os componentes necessários serão baixados automaticamente e salvos na mesma pasta.
+- Ao executar o arquivo **Intune-Desktop-Packager.ps1** pela primeira vez, os componentes necessários serão baixados automaticamente e salvos na mesma pasta.
 - Com uma interface gráfica intuitiva, o processo de empacotamento torna-se mais rápido, acessível e livre de linhas de comando.
 <table>
   <tr>
-    <td><img src="imagens/INTUNEWIN-DEPLOY-02.png"></td>
+    <td><img src="imagens/INTUNE-GUI-01.png"></td>
   </tr>
 </table>
 <table>

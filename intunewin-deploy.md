@@ -296,11 +296,16 @@ Utilize essa funcionalidade se:
     <td><img src="imagens/INTUNEWIN-DEPLOY-19.png"></td>
   </tr>
 </table>
+<table>
+  <tr>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-20.png"></td>
+  </tr>
+</table>
 
 14. O monitoramento do aplicativo poderá ser acompanhado através da guia Monitorar e, conforme a instalação manual ocorra, o quantitativo será exibido automaticamente na próxima sincronização do Intune:
 <table>
   <tr>
-    <td><img src="imagens/INTUNEWIN-DEPLOY-20.png"></td>
+    <td><img src="imagens/INTUNEWIN-DEPLOY-21.png"></td>
   </tr>
 </table>
  

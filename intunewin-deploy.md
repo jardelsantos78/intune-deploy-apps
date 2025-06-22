@@ -5,7 +5,7 @@ Este guia apresenta o passo a passo para distribuir aplicativos personalizados o
 ## ✅ Pré-requisitos
 
 - Ferramenta [Microsoft Win32 Content Prep Tool](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool).
-   > **Nota:** há diversas ferramentas na internet que servem como frontend GUI para o aplicativo da Microsoft sendo assim, para facilitar o processo de criação será disponibilizado neste repositório o código script Powershell de um frontend que estou desenvolvendo para uso interno. Para saber mais, consulte [Intune Desktop Packager](./GUI/intune-gui.md)
+   > **Nota:** existem diversas ferramentas na internet que oferecem uma interface gráfica para o empacotador oficial da Microsoft. Pensando em simplificar as coisas, desenvolvi um frontend em PowerShell totalmente personalizável. Neste repositório, você encontrará o código-fonte da ferramenta, que pode ser ajustar ao seu cenrário incluindo, por exemplo, a adição do logotipo da sua empresa. Para saber mais, consulte o projeto [Intune Desktop Packager](./GUI/intune-gui.md)
 - Arquivos de instalação prontos (como instaladores .exe, .msi, .bat, .cmd, .ps1 etc.).
 - Parâmetros de instalação silenciosa.
    > **Dica**: consulte os sites [SilentInstalHQ](https://silentinstallhq.com/) ou [Manage Engine Endpoint Central](https://www.manageengine.com/products/desktop-central/software-installation/latest-software.html) para descobrir os parâmetros de instalação silenciosa.

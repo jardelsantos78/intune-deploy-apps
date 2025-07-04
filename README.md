@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./imagens/BANNER-INTUNE.png" alt="Banner do Projeto" width="60%">
+</p>
+
 # Deploy de aplicativos via Microsoft Intune
 
 Este repositório fornece um passo a passo para realizar o deploy de aplicativos em ambientes corporativos utilizando o Microsoft Intune. São abordados três métodos distintos: instalação de aplicativos no formato `.MSI`, publicação via Microsoft Store e distribuição de pacotes `.INTUNEWIN`.
